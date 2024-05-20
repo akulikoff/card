@@ -1,4 +1,4 @@
-<!-- Use Ctrl/Cmd + Shift + V in VS Code to preview this Markdown file. -->
+visit https://yandex.zoom.us/j/91430567704
 
 # GreatFrontEnd Projects Challenge
 
