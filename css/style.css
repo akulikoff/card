@@ -6,6 +6,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
 }
+img {
+  content-visibility: auto;
+}
 .card {
   width: 372px;
   margin-top: 120px;
