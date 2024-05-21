@@ -11,27 +11,7 @@ const data = {
 </script>
 
 <template>
-  <Card
-    :title="data.title"
-    :teaserText="data.teaserText"
-    :description="data.description"
-    :imageUrl="data.imageUrl"
-    :link="data.link"
-  />
+  <Card v-bind="data" />
 </template>
 
-<style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
-</style>
-./components/Card.vue
+<style scoped></style>

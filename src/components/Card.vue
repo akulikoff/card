@@ -1,11 +1,12 @@
 <script setup lang="ts">
-defineProps<{
+interface CardProps {
   title: string;
   teaserText?: string;
   description: string;
   imageUrl: string;
   link: string;
-}>();
+}
+defineProps<CardProps>();
 </script>
 
 <template>
