@@ -1,14 +1,18 @@
 <script setup lang="ts">
-import { ref } from "vue";
-
-// defineProps<{ title: string }>();
+defineProps<{
+  title: string;
+  teaserText?: string;
+  description: string;
+  imageUrl: string;
+  link: string;
+}>();
 </script>
 
 <template>
   <body class="bg-gradient-to-b from-grey-50 to-grey-300">
     <div class="card flex flex-col justify-center px-4 mx-auto">
       <img
-        src="/spacejoy-YqFz7UMm8qE-unsplash.jpg"
+        :src="imageUrl"
         alt="teaser"
         loading="lazy"
         class="rounded-t-lg object-cover w-full h-72"
@@ -17,15 +21,14 @@ import { ref } from "vue";
         <div class="my-4">
           <span
             class="bg-green-50 rounded-full px-2 py-0.5 border border-green-200 text-green-700 text-sm font-medium"
-            >Interior</span
+            >{{ teaserText }}</span
           >
         </div>
         <h3 class="text-lg text-neutral-900 font-semibold mb-2 line-clamp-1">
-          Top 5 Living Room Inspirations
+          {{ title }}
         </h3>
         <p class="text-neutral-600 mb-2 font-medium text-base line-clamp-2">
-          Curated vibrants colors for your living, make it pop & calm in the
-          same time.
+          {{ description }}
         </p>
 
         <a
@@ -39,7 +42,23 @@ import { ref } from "vue";
 </template>
 
 <style scoped>
-.read-the-docs {
-  color: #888;
+body {
+  margin: 0;
+  font-family: "Noto Sans", sans-serif;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+img {
+  content-visibility: auto;
+}
+.card {
+  width: 372px;
+  margin-top: 120px;
+}
+
+* {
+  box-sizing: border-box;
 }
 </style>
