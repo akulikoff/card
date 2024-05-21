@@ -11,13 +11,7 @@ const data = {
 </script>
 
 <template>
-  <Card
-    :title="data.title"
-    :teaserText="data.teaserText"
-    :description="data.description"
-    :imageUrl="data.imageUrl"
-    :link="data.link"
-  />
+  <Card v-bind="data" />
 </template>
 
 <style scoped></style>
